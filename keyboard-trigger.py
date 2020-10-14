@@ -7,7 +7,8 @@ from pylsl import StreamInfo, StreamOutlet, IRREGULAR_RATE, cf_float32
 from pynput import keyboard as kb  # for capturing the keyboard events
 
 # instanciate command line argument parser
-parser = argparse.ArgumentParser()
+custom_usage = "[-h] [-e {press,release}] [-o OPENED] [-c CLOSED]"
+parser = argparse.ArgumentParser(usage=f"python %(prog)s {custom_usage}")
 # by default `python script.py -h` or `python script --help` displays:
 # usage: script.py [-h]
 #
@@ -36,7 +37,7 @@ parser.add_argument(
     "--closed",
     type=str,
     default="down",
-    help="trigger key for eyes opened, e.g. up, down (default), space...)",
+    help="trigger key for eyes opened, e.g. up, down (default), space...",
 )
 
 # parse added arguments/paramenters
