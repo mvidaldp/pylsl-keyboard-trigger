@@ -31,7 +31,7 @@ __How to run it:__
 0. Install the LSL library: [liblsl](https://github.com/sccn/liblsl/releases/latest)
 1. Install the Python dependencies: `pip install -r requirements.txt`
 2. Download, install and run the [LSL LabRecorder](https://github.com/labstreaminglayer/App-LabRecorder/releases/latest)
-3. Run the `keyboard-trigger.py` script by: `python keyboard-trigger.py`
+3. Run the `keyboard-trigger.py` script by: `python keyboard-trigger.py` (run `stty -echo` before calling the script to avoid the keyboard input to be shown between the script output)
 
 ![LabRecorder](https://github.com/mvidaldp/pylsl-keyboard-trigger/raw/main/labrecorder.png)
 
