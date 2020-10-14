@@ -1,9 +1,29 @@
 # pylsl-keyboard-trigger
-Very simple Python script to send LSL markers (aka triggers) over the local network by pressing any keyboard key. It also includes a recording example, and how to read the recording.
+![keyboard-trigger](https://github.com/mvidaldp/pylsl-keyboard-trigger/raw/main/keyboard-trigger_demo.gif)
+
+Very simple Python script that sends LSL markers (aka triggers) over the local network by pressing or releasing any of the two target keyboard keys.
+
+In this specific script, since it's meant for an EEG eyes open/closed experimental task, one target key press/release is for indicating when the eyes are opened and the other for when they're closed. By default (no parameters specified), the selected event is `press` and the keys are `up` (eyes open) and `down` (eyes closed). 
+
+The keyboard event to capture (press or release), and also the target keys can be customized by passing arguments on the script call:
+```
+usage: python keyboard-trigger.py [-h] [-e {press,release}] [-o OPENED] [-c CLOSED]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -e {press,release}, --event {press,release}
+                        key event to send triggers: press (default) or release
+  -o OPENED, --opened OPENED
+                        trigger key for eyes opened, e.g. up (default), down, space...
+  -c CLOSED, --closed CLOSED
+                        trigger key for eyes opened, e.g. up, down (default), space...
+```
+
+This repo also includes a basic recording example where UNIX epochs were stored, and a basic notebook for how to read it.
 
 __Contents__
-- `keyboard-trigger.py`: keyboard-trigger events via key press event (key release also captured).
-- `recording_test.xdf`: XDF recording of LSL streams. 
+- `keyboard-trigger.py`: keyboard-trigger events via target key press/release event (non-target keys also captured).
+- `recording_test.xdf`: simple XDF recording of LSL streams containing UNIX epochs sent from Python on any key press event. 
 - `read_XDF_example.ipynb`: Jupyter notebook demonstrating how to read LSL streams from XDF recordings.
 
 __How to run it:__
