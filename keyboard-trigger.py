@@ -80,7 +80,7 @@ def send_trigger(eyes_state):
     outlet.push_sample([timestamp, eyes_state])
     eyes_label = "👁 opened" if eyes_state == 1.0 else "❌ closed"
     print(f"Eyes status: {eyes_label}")
-    print("Sample pushed!\n")
+    print("Sample pushed!")
 
 
 # check if key pressed/released is a char or others and return it
