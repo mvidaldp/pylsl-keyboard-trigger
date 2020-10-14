@@ -7,6 +7,7 @@ __Contents__
 - `read_XDF_example.ipynb`: Jupyter notebook demonstrating how to read LSL streams from XDF recordings.
 
 __How to run it:__
+
 0. Install the LSL library: [liblsl](https://github.com/sccn/liblsl/releases/latest)
 1. Install the Python dependencies: `pip install -r requirements.txt`
 2. Download, install and run the [LSL LabRecorder](https://github.com/labstreaminglayer/App-LabRecorder/releases/latest)
