@@ -1,5 +1,5 @@
 # pylsl-keyboard-trigger
-Very simple Python script to send LSL markers (aka triggers) over local network by pressing any keyboard key. It also includes a recording example, and how to read the recording.
+Very simple Python script to send LSL markers (aka triggers) over the local network by pressing any keyboard key. It also includes a recording example, and how to read the recording.
 
 __Contents__
 - `keyboard-trigger.py`: keyboard-trigger events via key press event (key release also captured).
