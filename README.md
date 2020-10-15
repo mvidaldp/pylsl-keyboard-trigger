@@ -1,7 +1,7 @@
 # pylsl-keyboard-trigger
 ![keyboard-trigger](https://github.com/mvidaldp/pylsl-keyboard-trigger/raw/main/keyboard-trigger_demo.gif)
 
-Very simple Python script that sends LSL markers (aka triggers) over the local network by pressing or releasing any of the two target keyboard keys.
+Python script that sends LSL markers (aka triggers) over the local network by pressing or releasing any of the two target keyboard keys.
 
 In this specific script, since it's meant for an EEG eyes open/closed experimental task, one target key press/release is for indicating when the eyes are opened and the other for when they're closed. By default (no parameters specified), the selected event is `press` and the keys are `up` (eyes open) and `down` (eyes closed). 
 
