@@ -19,12 +19,12 @@ optional arguments:
                         trigger key for eyes opened, e.g. up, down (default), space...
 ```
 
-This repo also includes a basic recording example where UNIX epochs were stored, and a basic notebook for how to read it.
+This repo also includes a 30-seconds streams recording example where UNIX epochs with eyes-closed/opened(0/1) samples were stored, simulatneously with EEG data streamed from an Android app. Moreover, a basic notebook for how to read the recording is included.
 
 __Contents__
 - `keyboard-trigger.py`: keyboard-trigger events via target key press/release event (non-target keys also captured).
-- `recording_test.xdf`: simple XDF recording of LSL streams containing UNIX epochs sent from Python on any key press event. 
-- `read_XDF_example.ipynb`: Jupyter notebook demonstrating how to read LSL streams from XDF recordings.
+- `howto_read_XDF_recordings.ipynb`: recording example with simultaneous streams from a mobile EEG Android App and a Python script sending keyboard triggers.
+- `eeg_plus_triggers.xdf`: Jupyter notebook demonstrating how to read LSL streams from XDF recordings.
 
 __How to run it:__
 
@@ -36,10 +36,13 @@ __How to run it:__
 ![LabRecorder](https://github.com/mvidaldp/pylsl-keyboard-trigger/raw/main/labrecorder.png)
 
 4. Make sure the stream `KeyboardTrigger` appears on the LabRecorder (otherwise click `Update`), selected it (check it), and click `Start`.
-5. Press any key to send a trigger. Press the ESC key to stop streaming and also to stop the script.
+5. Press any of the target keys to send a trigger. Press the ESC key to stop streaming and also to stop the script.
 6. Click `Stop` on the LabRecorder.
 
 __How to read XDF recordings (example)__ 
-  - Offline: [read_XDF_example.ipynb](https://github.com/mvidaldp/pylsl-keyboard-trigger/blob/main/read_XDF_example.ipynb)
-  - Online: Open `read_XDF_example.ipynb` with your Jupyter notebook client to visualize or run the cells.
+  - Offline: [howto_read_XDF_recordings.ipynb](https://github.com/mvidaldp/pylsl-keyboard-trigger/blob/main/howto_read_XDF_recordings.ipynb)
+  - Online: Open `howto_read_XDF_recordings.ipynb` with your Jupyter notebook client to visualize or run the cells.
+  
+__Recorded data visualization__
+![data-visualization](https://github.com/mvidaldp/pylsl-keyboard-trigger/raw/main/recording_visualization.png)
   
