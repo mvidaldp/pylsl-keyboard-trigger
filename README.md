@@ -3,11 +3,11 @@
 
 Python script that sends LSL markers (aka triggers) over the local network by pressing or releasing any of the two target keyboard keys.
 
-In this specific script, since it's meant for an EEG eyes open/closed experimental task, one target key press/release is for indicating when the eyes are opened and the other for when they're closed. By default (no parameters specified), the selected event is `press` and the keys are `up` (eyes open) and `down` (eyes closed). 
+In this specific script, since it's meant for an EEG eyes open/closed experimental task, one target key press/release is for indicating when the eyes are opened and the other for when they're closed. By default (no parameters specified), the selected event is `press`, the keys are `up` (eyes open) and `down` (eyes closed), and the LSL stream name is `KeyboardTriggers`. 
 
-The keyboard event to capture (press or release), and also the target keys can be customized by passing arguments on the script call:
+The keyboard event to capture (press or release), the target keys, and the stream name can be customized by passing arguments on the script call:
 ```
-usage: python keyboard-trigger.py [-h] [-e {press,release}] [-o OPENED] [-c CLOSED]
+usage: python keyboard-trigger.py [-h] [-e {press,release}] [-o OPENED] [-c CLOSED] [-n NAME]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -17,6 +17,7 @@ optional arguments:
                         trigger key for eyes opened, e.g. up (default), down, space...
   -c CLOSED, --closed CLOSED
                         trigger key for eyes opened, e.g. up, down (default), space...
+  -n NAME, --name NAME  LSL outlet stream name: KeyboardTriggers (default)
 ```
 
 This repo also includes a 30-seconds streams recording example where UNIX epochs with eyes-closed/opened(0/1) samples were stored, simulatneously with EEG data streamed from an Android app. Moreover, a basic notebook for how to read the recording is included.
@@ -43,6 +44,5 @@ __How to read XDF recordings (example)__
   - Offline: [howto_read_XDF_recordings.ipynb](https://github.com/mvidaldp/pylsl-keyboard-trigger/blob/main/howto_read_XDF_recordings.ipynb)
   - Online: Open `howto_read_XDF_recordings.ipynb` with your Jupyter notebook client to visualize or run the cells.
   
-__Recorded data visualization__
+__Recorded data visualization (EEG data + triggers)__
 ![data-visualization](https://github.com/mvidaldp/pylsl-keyboard-trigger/raw/main/recording_visualization.png)
-  
