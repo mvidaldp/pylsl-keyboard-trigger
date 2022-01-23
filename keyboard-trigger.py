@@ -4,7 +4,7 @@ import uuid  # UIDs manipulation
 import sys  # interpreter objects
 
 # import LSL's Stream Info and Outlet classes, data and sampling rate types
-from pylsl import StreamInfo, StreamOutlet, IRREGULAR_RATE, cf_float32
+from pylsl import StreamInfo, StreamOutlet, IRREGULAR_RATE, cf_double64
 from pynput import keyboard as kb  # for capturing the keyboard events
 
 
@@ -194,7 +194,7 @@ if __name__ == "__main__":
         type="Markers",  # stream type
         channel_count=2,  # number of values to stream
         nominal_srate=IRREGULAR_RATE,  # sampling rate in Hz or IRREGULAR_RATE
-        channel_format=cf_float32,  # data type sent (dobule, float, int, str)
+        channel_format=cf_double64,  # data type sent (dobule, float, int, str)
         source_id=UID,  # unique identifier
     )
 
