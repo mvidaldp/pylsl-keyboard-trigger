@@ -198,6 +198,12 @@ if __name__ == "__main__":
         source_id=UID,  # unique identifier
     )
 
+    # metadata added following XDF standards:
+    # https://github.com/sccn/xdf/wiki/Meta-Data
+    parent = info.desc().append_child("channels")
+    parent.append_child("channel").append_child_value("label", "timestamp")
+    parent.append_child("channel").append_child_value("label", "closed/opened")
+
     # display LSL outlet stream information
     print("LSL stream\n==========")
     print(f"ID: {UID}")
